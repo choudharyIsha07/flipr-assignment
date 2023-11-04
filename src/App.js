@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Card from "./components/card";
 import axios from "axios";
+import { PropagateLoader as Loader } from "react-spinners";
 import "./App.css";
 
 const category = [
@@ -83,6 +84,13 @@ function App() {
           ))}
         </select>
       </div>
+
+      {filteredList.length == 0 && (
+        <div className="loader">
+          <Loader size={15} color="#36d7b7" />
+        </div>
+      )}
+
       <div className="grid-container">
         {filteredList.map(
           (data) =>
