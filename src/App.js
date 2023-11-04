@@ -85,7 +85,7 @@ function App() {
         </select>
       </div>
 
-      {filteredList.length == 0 && (
+      {filteredList.length === 0 && (
         <div className="loader">
           <Loader size={15} color="#36d7b7" />
         </div>
