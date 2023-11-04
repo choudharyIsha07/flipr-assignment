@@ -1,0 +1,41 @@
+main {
+  min-height: 100vh;
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+@media screen and (max-width: 850px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.selector {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+select {
+  padding: 8px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
